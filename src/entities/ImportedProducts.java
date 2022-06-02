@@ -20,4 +20,8 @@ public class ImportedProducts extends Product {
     public void setCustomsFee(Double customsFee) {
         this.customsFee = customsFee;
     }
+    @Override
+    public String priceTag(){
+        return getName() + "$" + getPrice() + "(Customs fee :"+ " $" + getCustomsFee() + ")";
+    }
 }

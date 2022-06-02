@@ -2,10 +2,10 @@ package entities;
 
 import java.util.Date;
 
-public class UsedProducts extends Product{
+public class UsedProducts extends Product {
     public Date manufactureDate;
 
-    public UsedProducts(){
+    public UsedProducts() {
         super();
     }
 
@@ -20,5 +20,10 @@ public class UsedProducts extends Product{
 
     public void setManufactureDate(Date manufactureDate) {
         this.manufactureDate = manufactureDate;
+    }
+
+    @Override
+    public String priceTag() {
+        return getName() + " (used)" + "$ " + getPrice() + " " + getManufactureDate();
     }
 }
