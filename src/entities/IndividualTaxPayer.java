@@ -24,10 +24,10 @@ public class IndividualTaxPayer extends TaxPayer {
     public double taxPayment() {
         double tax = 0;
         if (getAnnualIncome() < 20000.00) {
-            tax = getAnnualIncome() * 0.15 + getHealthExpenses() * 0.5;
+            tax = getAnnualIncome() * 0.15 - (getHealthExpenses() * 0.5);
         }
         if (getAnnualIncome() > 20000.00) {
-            tax = getAnnualIncome() * 0.25 + getHealthExpenses() * 0.5;
+            tax = getAnnualIncome() * 0.25 - (getHealthExpenses() * 0.5);
         }
         return tax;
     }
